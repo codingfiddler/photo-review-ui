@@ -32,7 +32,7 @@ function App() {
           <Link to="/test">Check out this cool test page!</Link>
           <Link to="/camera">Check out this super cool Yashica 124 MatG!</Link>
 
-          {/* <TestComponent name="Tim" /> */}
+          <TestComponent name="Tim" />
         <Switch>
           <Route exact path="/test">
             <TestPage />

@@ -1,5 +1,7 @@
 import React from 'react'
+import Axios from 'axios';
 
+// Pure functional component
 // export default function TestComponent(props) {
 //     return (
 //         <p>Hello There {props.name}!</p>
@@ -8,24 +10,20 @@ import React from 'react'
 
 export default class TestComponent extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            name: 'Starter Name'
-        }
+    state = {
+        name: 'Starter name'
     }
 
-    onChange(e) {
+    handleChange = e => {
         const newValue = e.target.value;
-        this.setState({'name': newValue})
+        this.setState({'name': newValue});
     }
 
     render() {
         const { name } = this.state;
         return (
             <>
-                <input name="Name" type="text" value={name} onChange={this.onChange} />
+                <input name="Name" type="text" value={name} onChange={this.handleChange} />
                 <p>{this.state.name}</p>
             </>
         )
