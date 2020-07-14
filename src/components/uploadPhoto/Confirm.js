@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 
 export class Confirm extends Component {
+
   continue = e => {
     e.preventDefault();
     // PROCESS FORM //
@@ -17,45 +24,66 @@ export class Confirm extends Component {
   };
 
   render() {
+
     const { 
       values: { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso }
     } = this.props;
+
     return (
       <MuiThemeProvider>
         <>
           <br/>
             <h3>Please Confirm Your Information</h3>
-            <List>
-              <ListItem>
-                <ListItemText primary="Title" secondary={title} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Location" secondary={location} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Date Taken" secondary={dateTaken} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Editing Software" secondary={softwareUsed} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Camera Model" secondary={cameraModel} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Camera Lens" secondary={cameraLens} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Aperture" secondary={aperture} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="Shutter Speed" secondary={shutterSpeed} />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary="ISO" secondary={iso} />
-              </ListItem>
-            </List>
-            <br />
-
+            <TableContainer component={Paper}>
+              <Table size="small" aria-label="a dense table">
+                <TableHead style={{backgroundColor: "#092532"}}>
+                  <TableRow>
+                    <TableCell style={{fontWeight: 'bold', color: '#32e0c4'}}>Information</TableCell>
+                    <TableCell align="right" style={{fontWeight: 'bold', color: '#32e0c4'}}>Your Entry</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                    <TableRow> 
+                      <TableCell>Title</TableCell>
+                      <TableCell align="right">{title}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Location</TableCell>
+                      <TableCell align="right">{location}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Date</TableCell>
+                      <TableCell align="right">{dateTaken}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Editing Software</TableCell>
+                      <TableCell align="right">{softwareUsed}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Camera Model</TableCell>
+                      <TableCell align="right">{cameraModel}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Camera Lens</TableCell>
+                      <TableCell align="right">{cameraLens}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Aperture</TableCell>
+                      <TableCell align="right">{aperture}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>Shutter Speed</TableCell>
+                      <TableCell align="right">{shutterSpeed}</TableCell>
+                    </TableRow>
+                    <TableRow> 
+                      <TableCell>ISO</TableCell>
+                      <TableCell align="right">{iso}</TableCell>
+                    </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <br/>
+            
             <Button
               style={{width: "50%"}}
               color="default"
