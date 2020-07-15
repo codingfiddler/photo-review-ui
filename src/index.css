@@ -17,7 +17,7 @@ code {
 }
 
 .g-card-image {
-  border-radius: 10px;
+  border-radius: 2px;
   width: 350px;
   height: 500px;
   box-shadow: 0px 0px 3px 1px #ccc;
@@ -25,8 +25,8 @@ code {
 }
 
 .g-card-info {
-  margin-top: 10px;
-  min-height: 100px;
+  margin-top: 5px;
+  min-height: 50px;
 }
 
 .g-card-title {

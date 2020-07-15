@@ -15,7 +15,7 @@ function ImageCard(props) {
       {props.item.selected && (
         <CardInfo
           title={props.item.title}
-          author={props.item.eye}
+          author={props.item.author}
           link={props.item.link}
         />
       )}
