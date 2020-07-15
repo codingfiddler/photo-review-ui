@@ -6,14 +6,14 @@ import UploadNavBar from '../components/uploadPhoto/UploadNavBar'
 class UploadPhoto extends React.Component {
     render() {
         return (
-            <>
+            <div>
                 <UploadNavBar/>
                 <Container maxWidth="sm">
                     <div>
                     <PhotoForm/>
                     </div>
                 </Container>
-            </>
+            </div>
         )
     }
 }
