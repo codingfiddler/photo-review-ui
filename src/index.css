@@ -17,7 +17,8 @@ code {
 }
 
 .g-card-image {
-  border-radius: 2px;
+  border-radius: 2.1px;
+
   width: 350px;
   height: 500px;
   box-shadow: 0px 0px 3px 1px #ccc;
