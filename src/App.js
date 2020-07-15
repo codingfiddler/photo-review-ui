@@ -18,10 +18,6 @@ class App extends React.Component {
         title: "Krino",
         subtitle: "Capture the aspect",
       },
-      explore: {
-        title: "Explore",
-        subtitle: "...moments forever frozen",
-      },
     };
   }
 
