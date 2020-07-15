@@ -1,30 +1,58 @@
-import React from 'react';
-import './App.css'
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Home from "./pages/Home";
+import Explore from "./pages/Explore";
+import UploadPhoto from "./pages/UploadPhoto";
+import UserProfile from "./pages/UserProfile";
+import EditUser from "./pages/EditUser";
+import Review from "./pages/Review";
+import Hero from "./components/Hero";
+import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 
-import Home from "./pages/Home"
-import Explore from "./pages/Explore"
-import UploadPhoto from "./pages/UploadPhoto"
-import UserProfile from './pages/UserProfile'
-import EditUser from './pages/EditUser'
-import Review from './pages/Review'
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      home: {
+        title: "Krino",
+        subtitle: "Capture the aspect",
+      },
+      explore: {
+        title: "Explore",
+        subtitle: "...moments forever frozen",
+      },
+    };
+  }
 
-function App() {
-  return (
-    <>
-        <Router>
-          <Switch>
-            <Route exact path ="/" component={Home}/>
-            <Route path ="/home" component={Home}/>
-            <Route path ="/explore" component={Explore}/>
-            <Route path ="/uploadPhoto" component={UploadPhoto}/>
-            <Route path ="/userProfile" component={UserProfile}/>
-            <Route path ="/editUser" component={EditUser}/>
-            <Route path ="/review" component={Review}/>
-          </Switch>
-        </Router>
-    </>
-  );
+  render() {
+    return (
+      <>
+        <Container className="p-0" fluid={true}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/home" component={Home} />
+              <Route path="/explore" component={Explore} />
+              <Route path="/uploadPhoto" component={UploadPhoto} />
+              <Route path="/userProfile" component={UserProfile} />
+              <Route path="/editUser" component={EditUser} />
+              <Route path="/review" component={Review} />
+            </Switch>
+
+            {/* explore contents className="p-5"*/}
+            <div fluid={true}>
+              <Hero item={this.state.explore} />
+              <Carousel />
+              <Footer />
+            </div>
+          </Router>
+        </Container>
+      </>
+    );
+  }
 }
 
 export default App;
