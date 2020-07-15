@@ -4,7 +4,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 
 //Styling of the components
@@ -30,7 +30,7 @@ export default function ReviewNavBar() {
       <AppBar position="static">
         <Toolbar style={{backgroundColor: "#092532"}}>
             <Typography align= "center" className={classes.title} variant="h6" noWrap>
-                LEAVE A REVIEW
+                PLEASE LEAVE A REVIEW
             </Typography>
             
         </Toolbar>
