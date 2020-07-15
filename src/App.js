@@ -8,8 +8,6 @@ import UploadPhoto from "./pages/UploadPhoto";
 import UserProfile from "./pages/UserProfile";
 import EditUser from "./pages/EditUser";
 import Review from "./pages/Review";
-import Hero from "./components/Hero";
-import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
 class App extends React.Component {
@@ -41,15 +39,10 @@ class App extends React.Component {
               <Route path="/editUser" component={EditUser} />
               <Route path="/review" component={Review} />
             </Switch>
-
-            {/* explore contents className="p-5"*/}
-            <div fluid={true}>
-              <Hero item={this.state.explore} />
-              <Carousel />
-              <Footer />
-            </div>
           </Router>
+          {/* <Explore information={this.state.explore} /> */}
         </Container>
+        <Footer />
       </>
     );
   }
