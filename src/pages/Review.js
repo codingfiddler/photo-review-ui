@@ -7,16 +7,16 @@ class Review extends React.Component {
     render() {
         return (
             <div>
-                <ReviewNavBar/>
+                <ReviewNavBar />
                 <div>
-                <Box display="flex" flexDirection="row" width="100%">
-                    <Box p={2} width="50%">
-                        <img src ="https://www.designyourway.net/blog/wp-content/uploads/2019/05/iPad-Pro-wallpaper-4-700x700.jpg" width="100%"/>
+                    <Box display="flex" flexDirection="row" width="100%">
+                        <Box p={2} width="50%">
+                            <img width="100%" src="https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
+                        </Box>
+                        <Box p={2} width="50%">
+                            <Comments />
+                        </Box>
                     </Box>
-                    <Box p={2} width="50%">
-                        <Comments/>
-                    </Box>
-                </Box>
                 </div>
             </div>
         )

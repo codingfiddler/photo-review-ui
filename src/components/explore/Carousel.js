@@ -4,6 +4,12 @@ import Row from "react-bootstrap/Row";
 import ImageCard from "./ImageCard";
 
 export class Carousel extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     items: props.photos,
+  //   };
+  // }
   constructor(props) {
     super(props);
     this.state = {
