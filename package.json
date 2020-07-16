@@ -9,12 +9,18 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "material-ui": "^0.20.2",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+<<<<<<< HEAD
     "styled-components": "^5.1.1"
+=======
+    "react-spring": "^8.0.27"
+>>>>>>> 34eb70227a0d9f83fd86721a14d5df73a03dcbc5
   },
   "scripts": {
     "start": "react-scripts start",
