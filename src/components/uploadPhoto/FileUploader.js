@@ -20,7 +20,7 @@ const FileUploader = props => {
 return (
     <>
       <Button onClick={handleClick}>
-        Upload a File!
+        Attach image
       </Button>
       <input type = "file" 
              ref = {hiddenFileInput} 

@@ -18,7 +18,9 @@ class FormPhotoDetails extends Component {
       <MuiThemeProvider>
         <>
             <br/>
+            <FileUploader handleFile={this.props.handleFile} />
             <h3>Please Enter Photo Details</h3>
+
             <TextField
               placeholder="Enter the Title"
               label="Title"
@@ -41,7 +43,7 @@ class FormPhotoDetails extends Component {
               type="date"
               placeholder="Enter the date "
               label="Date Taken"
-              //onChange={handleChange('dateTaken')}
+              onChange={handleChange('dateTaken')}
               defaultValue={values.dateTaken}
               margin="normal"
               fullWidth
@@ -57,7 +59,7 @@ class FormPhotoDetails extends Component {
             />
             <br/>
               
-            <FileUploader handleFile={this.props.handleFile} />
+            
                                     
             <br/>
             <Button

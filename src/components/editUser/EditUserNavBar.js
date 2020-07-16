@@ -32,7 +32,7 @@ export default function ReviewNavBar() {
             <Typography align= "center" className={classes.title} variant="h6" noWrap>
                 EDIT USER INFORMATION
             </Typography>
-            
+
         </Toolbar>
       </AppBar>
     </div>
