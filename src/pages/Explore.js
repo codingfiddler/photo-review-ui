@@ -4,7 +4,7 @@ import Hero from "../components/explore/Hero";
 import Carousel from "../components/explore/Carousel";
 import Footer from "../components/Footer";
 import PhotoContainer from "../components/explore/PhotoContainer";
-
+import Link from "@material-ui/core/Link"
 class Explore extends React.Component {
   constructor() {
     super();
@@ -43,7 +43,9 @@ class Explore extends React.Component {
         <div fluid={true}>
           <Hero item={this.state.information} />
           {/* <Carousel /> */}
-          <Carousel photos={this.state.photos} />
+          <Link href="/review">
+            <Carousel photos={this.state.photos} />
+          </Link>
         </div>
       </div>
     );
