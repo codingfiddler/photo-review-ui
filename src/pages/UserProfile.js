@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import UserNavBar from '../components/userProfile/UserNavBar'
 
 class UserProfile extends React.Component {
@@ -7,8 +7,11 @@ class UserProfile extends React.Component {
             <div>
                 <UserNavBar/>
             </div>
+            
         )
     }
 }
+UserProfile.propTypes = {
+};
 
 export default UserProfile
