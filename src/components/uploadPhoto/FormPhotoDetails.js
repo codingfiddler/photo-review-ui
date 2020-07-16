@@ -3,14 +3,16 @@ import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import FileUploader from './FileUploader';
 
-export class FormPhotoDetails extends Component {
+
+class FormPhotoDetails extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
 
-  render() {
+   render() {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
@@ -39,7 +41,7 @@ export class FormPhotoDetails extends Component {
               type="date"
               placeholder="Enter the date "
               label="Date Taken"
-              onChange={handleChange('dateTaken')}
+              //onChange={handleChange('dateTaken')}
               defaultValue={values.dateTaken}
               margin="normal"
               fullWidth
@@ -53,6 +55,10 @@ export class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
+            <br/>
+              
+            <FileUploader handleFile={this.props.handleFile} />
+                                    
             <br/>
             <Button
               style={{backgroundColor: "#32e0c4", width: "100%"}}

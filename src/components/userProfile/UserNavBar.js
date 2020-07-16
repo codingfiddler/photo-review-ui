@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton'
 import Link from '@material-ui/core/Link'
 import InputBase from '@material-ui/core/InputBase';
 
-//Styling of the components
+//Styling the components
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
