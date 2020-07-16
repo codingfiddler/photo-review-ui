@@ -14,7 +14,7 @@ import Link from "@material-ui/core/Link";
 import InputBase from "@material-ui/core/InputBase";
 import logo from "../../assets/logo.png"
 
-//Styling of the components
+//Styling the components
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

@@ -6,6 +6,7 @@ class EditUser extends React.Component {
         return (
             <div>
                 <EditUserNavBar/>
+                <p> Hello this is the user profile</p>
             </div>
         )
     }
