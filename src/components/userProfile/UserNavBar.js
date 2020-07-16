@@ -12,6 +12,7 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import IconButton from "@material-ui/core/IconButton";
 import Link from "@material-ui/core/Link";
 import InputBase from "@material-ui/core/InputBase";
+import logo from "../../assets/logo.png"
 
 //Styling of the components
 const useStyles = makeStyles((theme) => ({
@@ -73,7 +74,13 @@ export default function UserNavBar() {
       <AppBar position="static">
         <Toolbar style={{ backgroundColor: "#092532" }}>
           <Typography className={classes.title} variant="h6" noWrap>
-            KRINO
+            <IconButton href="/">
+              <img
+                src={logo}
+                alt="logo"
+                height="30px"
+              />
+            </IconButton>
           </Typography>
           <Link href="/uploadPhoto">
             <Button

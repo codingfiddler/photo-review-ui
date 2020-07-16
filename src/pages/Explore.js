@@ -42,7 +42,6 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
-          {/* <Carousel /> */}
           <Link href="/review">
             <Carousel photos={this.state.photos} />
           </Link>
