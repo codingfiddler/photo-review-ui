@@ -15,9 +15,9 @@ const PhotoContainer = (props) => {
             <h1 className="g-card-title font-weight-bolder">{photo.title}</h1>
             <h2 className="g-card-eye">the author's name</h2>
           </div>
-          <span className="g-card-image image m-1">
+          {/* m-1 */}
+          <span className="g-card-image image">
             <Imgix height="100%" width="100%" src={photo.url} />
-            {/* sizes="calc(10% - 10px)" height="95%" width="95%" */}
           </span>
         </>
       ))}
