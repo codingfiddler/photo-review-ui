@@ -1,7 +1,8 @@
 import React from 'react'
 import ReviewNavBar from '../components/review/ReviewNavBar'
-import Comments from '../components/review/Comments'
+import CommentArea from '../components/review/CommentArea'
 import Box from '@material-ui/core/Box';
+
 
 class Review extends React.Component {
     render() {
@@ -14,7 +15,7 @@ class Review extends React.Component {
                             <img width="100%" src="https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
                         </Box>
                         <Box p={2} width="50%">
-                            <Comments />
+                            <CommentArea />
                         </Box>
                     </Box>
                 </div>
