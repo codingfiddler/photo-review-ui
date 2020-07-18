@@ -4,107 +4,10 @@ import Row from "react-bootstrap/Row";
 import ImageCard from "./ImageCard";
 
 export class Carousel extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     items: props.photos,
-  //   };
-  // }
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        {
-          id: 0,
-          title: "C-3P0",
-          author: "@darkestSithLord",
-          imgSrc:
-            "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-          link:
-            "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-          selected: false,
-        },
-        {
-          id: 1,
-          title: "Canterbury",
-          author: "@waterLilies",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 2,
-          title: "Zion",
-          author: "@jackie_r",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594357570657-12d14a5b530f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594357570657-12d14a5b530f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 3,
-          title: "Blues",
-          author: "@yourFriendlyNeighborhoodPhotographer",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594671658937-09ac0c285e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594671658937-09ac0c285e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 4,
-          title: "small and fragile",
-          author: "@jackie_r",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594698434950-678673fab059?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594698434950-678673fab059?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 5,
-          title: "boats on clear green water",
-          author: "@watertakes",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594706243394-4523943cabb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594706243394-4523943cabb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
-          selected: false,
-        },
-        {
-          id: 6,
-          title: "Summer Afternoons",
-          author: "@photographerByDay",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594638804435-94cb48642b87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594638804435-94cb48642b87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 7,
-          title: "'Pointing'",
-          author: "@FN-2157",
-          imgSrc:
-            "https://images.unsplash.com/photo-1478479474071-8a3014d422c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1478479474071-8a3014d422c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-        {
-          id: 8,
-          title: "'Pointing'",
-          author: "@FN-2157",
-          imgSrc:
-            "https://images.unsplash.com/photo-1594639365410-c3c6c58fa0e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          link:
-            "https://images.unsplash.com/photo-1594639365410-c3c6c58fa0e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-          selected: false,
-        },
-      ],
+      items: props.photos,
     };
   }
 
@@ -131,6 +34,7 @@ export class Carousel extends Component {
       return (
         <ImageCard
           item={item}
+          // onHover={(e) => this.onHover(item.id, e)}
           onClick={(e) => this.handleCardClick(item.id, e)}
           key={item.id}
         />
