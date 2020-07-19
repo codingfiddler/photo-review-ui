@@ -21,6 +21,12 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
+
+    "react-grid-gallery": "^0.5.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.1.1"
     "react-hover": "^1.4.0",
     "react-image-gallery": "^1.0.7",
     "react-imgix": "^9.0.2",
@@ -31,8 +37,9 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2"
   },
+  
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripsts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
