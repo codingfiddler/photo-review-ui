@@ -1,11 +1,16 @@
 import React from "react";
 
-const Photo = (props) => {
-  return (
-    <div>
-      <img src={props.url} alt="doggo" />
-    </div>
-  );
-};
+class Photo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <img src={this.props.url} />
+      </div>
+    );
+  }
+}
 
 export default Photo;

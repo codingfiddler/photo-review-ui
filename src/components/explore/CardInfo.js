@@ -6,10 +6,7 @@ export default function CardInfo(props) {
   return (
     <animated.div className="g-card-info" style={style}>
       <p className="g-card-title">{props.title}</p>
-
-      <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <p className="g-class-sub-title">{props.author}</p>
-      </a>
+      <p className="g-class-sub-title">{props.author}</p>
     </animated.div>
   );
 }
