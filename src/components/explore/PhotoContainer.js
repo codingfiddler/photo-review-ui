@@ -2,24 +2,21 @@ import React from "react";
 import Photo from "./Photo";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ReactHover from "react-hover";
-import Gallery from "react-photo-gallery";
 import Imgix from "react-imgix";
+import PropTypes from "prop-types";
+import Masonry from "react-masonry-component";
 
 const PhotoContainer = (props) => {
   const displayPhotos = () => (
     <div className="gallery">
       {props.photos.map((photo) => (
-        <>
-          <div className="g-card-info">
-            <h1 className="g-card-title font-weight-bolder">{photo.title}</h1>
-            <h2 className="g-card-eye">the author's name</h2>
+        <div className="container">
+          <Imgix className="image" height="100%" width="100%" src={photo.url} />
+          <div className="overlay">
+            <h1 className="title font-weight-bolder">the title here</h1>
+            <h2 className="eye">the author's name</h2>
           </div>
-          {/* m-1 */}
-          <span className="g-card-image image">
-            <Imgix height="100%" width="100%" src={photo.url} />
-          </span>
-        </>
+        </div>
       ))}
     </div>
   );
@@ -72,3 +69,19 @@ export default PhotoContainer;
 //             <h2 className="g-card-eye">the author's name</h2>
 //           </div>
 //         </>
+
+// const displayPhotos = () => (
+//   <div className="gallery">
+//     {props.photos.map((photo) => (
+//       <div className="single-image">
+//         <div className="info">
+//           <h1 className="title font-weight-bolder">the title here</h1>
+//           <h2 className="eye">the author's name</h2>
+//         </div>
+//         <span className="image">
+//           <Imgix height="100%" width="100%" src={photo.url} />
+//         </span>
+//       </div>
+//     ))}
+//   </div>
+// );

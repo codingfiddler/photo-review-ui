@@ -68,8 +68,12 @@ class Explore extends React.Component {
         title: "Explore",
         subtitle: "...moments forever frozen",
       },
+      hovered: false,
     };
+    this.handleHover = this.handleHover.bind(this);
   }
+
+  handleHover() {}
 
   componentDidMount() {
     // https://api.thedogapi.com/v1/images/search?limit=3
@@ -96,7 +100,10 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
-          <PhotoContainer photos={this.state.photos} />
+          <PhotoContainer
+            onHover={this.handleHover}
+            photos={this.state.photos}
+          />
         </div>
       </div>
     );
