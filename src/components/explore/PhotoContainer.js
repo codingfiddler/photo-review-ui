@@ -11,10 +11,10 @@ const PhotoContainer = (props) => {
     <div className="gallery">
       {props.photos.map((photo) => (
         <div className="container">
-          <Imgix className="image" height="100%" width="100%" src={photo.url} />
+          <Imgix className="image" src={photo.url} />
           <div className="overlay">
-            <h1 className="title font-weight-bolder">the title here</h1>
-            <h2 className="eye">the author's name</h2>
+            <h1 className="title font-weight-bolder">{photo.title}</h1>
+            <h2 className="eye">{photo.photographer}</h2>
           </div>
         </div>
       ))}
