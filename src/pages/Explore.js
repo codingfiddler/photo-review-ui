@@ -2,6 +2,7 @@ import React from "react";
 import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
+import Link from '@material-ui/core/Link'
 
 class Explore extends React.Component {
   constructor() {
@@ -21,7 +22,7 @@ class Explore extends React.Component {
         {
           albumId: 1,
           id: 2,
-          title: "accusamus beatae ad facilis cum similique qui sunt",
+          title: "spark",
           url:
             "https://images.unsplash.com/photo-1594920271939-01e7158cc2a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80",
           thumbnailUrl:
@@ -30,7 +31,7 @@ class Explore extends React.Component {
         {
           albumId: 1,
           id: 3,
-          title: "accusamus beatae ad facilis cum similique qui sunt",
+          title: "colors",
           url:
             "https://images.unsplash.com/photo-1594972648683-4482b577ff9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
           thumbnailUrl:
@@ -39,7 +40,7 @@ class Explore extends React.Component {
         {
           albumId: 1,
           id: 4,
-          title: "accusamus beatae ad facilis cum similique qui sunt",
+          title: "coffee",
           url:
             "https://images.unsplash.com/photo-1594910336126-2ff2562441bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80",
           thumbnailUrl:
@@ -96,7 +97,9 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
-          <PhotoContainer photos={this.state.photos} />
+          <Link href='/review'>
+            <PhotoContainer photos={this.state.photos} />
+          </Link>
         </div>
       </div>
     );

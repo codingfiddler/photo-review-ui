@@ -4,7 +4,7 @@ margin: 0 auto;
 }
 
 label {
-color: white
+color: black
 
 }
 
@@ -35,7 +35,7 @@ justify-content: space-between;
 }
 
 .comments-form{
-    background-color: #092532;
+    background-color: #e0e0e0;
     padding: 10px;
     margin-bottom: 30px;
     border-radius: 10px;
