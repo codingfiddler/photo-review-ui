@@ -76,6 +76,7 @@ class Explore extends React.Component {
   handleHover() {}
 
   componentDidMount() {
+<<<<<<< Updated upstream
     // https://api.thedogapi.com/v1/images/search?limit=3
     fetch("https://jsonplaceholder.typicode.com/albums/1/photos").then(
       (res) => {
@@ -90,6 +91,12 @@ class Explore extends React.Component {
           .catch((err) => {
             throw Error(err.message);
           });
+=======
+    fetch("https://api.thedogapi.com/v1/images/search?limit=3").then((res) => {
+      // console.log(this.state.photos);
+      if (!res.ok) {
+        throw Error("error fetching cute doggie");
+>>>>>>> Stashed changes
       }
     );
   }
@@ -100,10 +107,15 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
+<<<<<<< Updated upstream
           <PhotoContainer
             onHover={this.handleHover}
             photos={this.state.photos}
           />
+=======
+          <Carousel />
+          {/* <Carousel photos={this.state.photos} /> */}
+>>>>>>> Stashed changes
         </div>
       </div>
     );
