@@ -2,7 +2,7 @@ import React from "react";
 import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
-import Link from '@material-ui/core/Link'
+import Link from 'react-router-dom/Link'
 
 class Explore extends React.Component {
   constructor() {
@@ -97,7 +97,7 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
-          <Link href='/review'>
+          <Link to='/review'>
             <PhotoContainer photos={this.state.photos} />
           </Link>
         </div>
