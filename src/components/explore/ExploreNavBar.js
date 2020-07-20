@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "react-router-dom/Link"
 
 //Material UI components
 import AppBar from '@material-ui/core/AppBar';
@@ -10,7 +11,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import IconButton from '@material-ui/core/IconButton'
-import Link from '@material-ui/core/Link'
 import InputBase from '@material-ui/core/InputBase';
 import logo from "../../assets/logo.png"
 
@@ -83,7 +83,7 @@ export default function HomeNavBar() {
               />
             </IconButton>
           </Typography>
-          <Link href="/uploadPhoto">
+          <Link to="/uploadPhoto">
             <Button
               style={{ backgroundColor: "#32e0c4", color: "white" }}
               variant="contained"
@@ -106,7 +106,7 @@ export default function HomeNavBar() {
             />
           </div>
 
-          <Link href="/userProfile">
+          <Link to="/userProfile">
             <IconButton>
               <AccountCircle fontSize="large" style={{ color: "#32e0c4" }} />
             </IconButton>

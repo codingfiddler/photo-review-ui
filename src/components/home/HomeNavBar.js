@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "react-router-dom/Link"
 
 //Material UI components
 import AppBar from '@material-ui/core/AppBar';
@@ -10,7 +11,6 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link'
 import logo from "../../assets/logo.png"
 
 //Styling of the components
@@ -86,7 +86,7 @@ export default function HomeNavBar() {
             </IconButton>
           </Typography>
 
-          <Link href="/uploadPhoto">
+          <Link to="/uploadPhoto">
             <Button
               style={{ backgroundColor: "#32e0c4", color: "white" }}
               variant="contained"

@@ -3,20 +3,24 @@ import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import FileUploader from './FileUploader';
 
-export class FormPhotoDetails extends Component {
+
+class FormPhotoDetails extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
 
-  render() {
+   render() {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
         <>
             <br/>
+            <FileUploader handleFile={this.props.handleFile} />
             <h3>Please Enter Photo Details</h3>
+
             <TextField
               placeholder="Enter the Title"
               label="Title"
@@ -53,6 +57,10 @@ export class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
+            <br/>
+              
+            
+                                    
             <br/>
             <Button
               style={{backgroundColor: "#32e0c4", width: "100%"}}
