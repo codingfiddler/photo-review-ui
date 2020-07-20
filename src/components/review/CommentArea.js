@@ -6,7 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import Paper from '@material-ui/core/Paper';
-import { Button, Comment, Form, Header } from 'semantic-ui-react'
+import Button from '@material-ui/core/Button'
+import { Comment, Form, Header } from 'semantic-ui-react'
 
 
 class CommentArea extends Component {
@@ -131,6 +132,8 @@ class CommentArea extends Component {
 
         return (
             <div className="App">
+                <h2>Leave a Review</h2>
+                <hr />
                 <section className="comments-form">
                     <form onSubmit={this.postComment}>
                         <label htmlFor="username">Your Name:</label>
@@ -153,7 +156,7 @@ class CommentArea extends Component {
                             value={newComment}
                             onChange={this.updateInput}
                         />
-                        <button type="submit">Submit</button>
+                        <Button style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
                     </form>
                 </section>
                 <h2>Reviews</h2>
