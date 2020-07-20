@@ -16,30 +16,33 @@ code {
   display: grid;
   grid-template-columns: repeat(4, minmax(20rem, 1fr));
   /* auto-fit */
+  z-index: 1;
 }
 
 .container {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 26px;
 }
 
 .image {
   width: 100%;
+  z-index: 1;
   height: 100%;
   object-fit: cover;
 }
 
 .image:hover {
   box-shadow: 0px 0px 3px 1px #ccc;
-  /* filter: brightness(75%); */
   z-index: 0;
+}
+.divider {
+  margin: 30px;
 }
 
 .overlay {
   height: 130px;
   position: absolute;
   bottom: 0px;
-  /* top: 291px; */
   left: 15.4px;
   color: #f1f1f1;
   width: 91.6%;
@@ -66,7 +69,33 @@ code {
 .eye {
   font-size: 13px;
   padding-top: 10px;
-  /* padding-left: 15px; */
   text-align: center;
 }
 
+.scrollTop {
+  position: fixed;
+  width: 100%;
+  bottom: 50px;
+  left: 670px;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+  z-index: 10000000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.7;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
