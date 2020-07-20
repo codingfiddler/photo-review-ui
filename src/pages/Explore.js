@@ -2,6 +2,7 @@ import React from "react";
 import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
+import Link from "@material-ui/core/Link";
 
 class Explore extends React.Component {
   constructor() {
@@ -20,6 +21,7 @@ class Explore extends React.Component {
           id: 2,
           title: "accusamus beatae ad facil",
           photographer: "@concreteJungler",
+          title: "spark",
           url:
             "https://images.unsplash.com/photo-1595230907762-54cfe6dbd901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80",
         },
@@ -27,6 +29,7 @@ class Explore extends React.Component {
           id: 3,
           title: "Look Through",
           photographer: "@kathyJennings",
+          title: "colors",
           url:
             "https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
         },
@@ -34,6 +37,7 @@ class Explore extends React.Component {
           id: 4,
           title: "Leaf Shadow",
           photographer: "@shadowHunter",
+          title: "coffee",
           url:
             "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
         },
@@ -110,10 +114,10 @@ class Explore extends React.Component {
         <ExploreNavBar />
         <div fluid={true}>
           <Hero item={this.state.information} />
-          <PhotoContainer
-            onHover={this.handleHover}
-            photos={this.state.photos}
-          />
+
+          <Link href="/review">
+            <PhotoContainer photos={this.state.photos} />
+          </Link>
         </div>
       </div>
     );

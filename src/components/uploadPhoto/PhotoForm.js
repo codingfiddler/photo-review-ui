@@ -40,6 +40,12 @@ export class PhotoForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
+  handleFile = fileUploaded => {
+    this.setState({
+      selectedFile: fileUploaded,
+    })
+  };
+
   render() {
     const { step } = this.state;
     const { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso } = this.state;
@@ -52,6 +58,7 @@ export class PhotoForm extends Component {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
+            handleFile={this.handleFile}
           />
         );
       case 2:
