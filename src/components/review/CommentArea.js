@@ -44,6 +44,17 @@ class CommentArea extends Component {
                 });
             })
             .catch(error => console.log(error));
+
+        // axios
+        // .post(`http://localhost:5000/photos/${photoID}/comment`, data)
+        // .then(response => {
+        //     const { username, newComment } = response.data;
+        //     this.setState({
+        //         username: '',
+        //         newComment: '',
+        //     });
+        // })
+        // .catch(error => console.log(error));
     };
 
     vote = (id, num) => {
