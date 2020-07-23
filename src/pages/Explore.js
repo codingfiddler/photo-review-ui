@@ -3,6 +3,7 @@ import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
 import Link from 'react-router-dom/Link'
+import ScrollUpArrow from "../components/ScrollUpArrow";
 
 class Explore extends React.Component {
   constructor() {
