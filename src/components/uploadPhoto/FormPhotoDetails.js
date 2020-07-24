@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FileUploader from './FileUploader';
-
+import Box from '@material-ui/core/Box';
 
 class FormPhotoDetails extends Component {
+
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
 
-   render() {
+
+  render() {
     const { values, handleChange } = this.props;
     return (
-      <MuiThemeProvider>
-        <>
-            <br/>
+      <>
+        <br /><br />
+        <Box display="flex" flexDirection="row" width="100%">
+
+          <Box p={1} width="100%" style={{ paddingRight: "30px" }}>
+            <h3>Please upload a Photo</h3>
+            <img src={this.props.previewUrl} width="300px" height="287px" />
             <FileUploader handleFile={this.props.handleFile} />
+          </Box>
+
+          <hr style={{
+            border: "none",
+            borderLeft: "1px solid hsla(200, 10%, 50%,100)",
+            height: "55vh",
+            width: "1px"
+          }} />
+
+          <Box p={1} width="100%" style={{ paddingLeft: "30px" }}>
             <h3>Please Enter Photo Details</h3>
 
             <TextField
@@ -29,7 +43,7 @@ class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
-            <br/>
+            <br />
             <TextField
               placeholder="Enter the location"
               label="Location"
@@ -38,7 +52,7 @@ class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
-            <br/>
+            <br />
             <TextField
               type="date"
               placeholder="Enter the date "
@@ -48,7 +62,7 @@ class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
-            <br/>
+            <br />
             <TextField
               placeholder="Enter the software used"
               label="Editing Software"
@@ -57,19 +71,18 @@ class FormPhotoDetails extends Component {
               margin="normal"
               fullWidth
             />
-            <br/>
-              
-            
-                                    
-            <br/>
+            <br />
+
+            <br />
             <Button
-              style={{backgroundColor: "#32e0c4", width: "100%"}}
+              style={{ backgroundColor: "#32e0c4", width: "100%" }}
               color="primary"
               variant="contained"
               onClick={this.continue}
             >Continue</Button>
-        </>
-      </MuiThemeProvider>
+          </Box>
+        </Box>
+      </>
     );
   }
 }

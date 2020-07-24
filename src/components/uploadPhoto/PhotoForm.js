@@ -8,7 +8,6 @@ export class PhotoForm extends Component {
   state = {
     step: 1,
     title: "",
-    //description: "",
     location: "",
     dateTaken: "",
     softwareUsed: "",
@@ -16,7 +15,8 @@ export class PhotoForm extends Component {
     cameraLens: "",
     aperture: "",
     shutterSpeed: "",
-    iso: ""
+    iso: "",
+    previewUrl: "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
   };
 
   // Proceed to next step
@@ -41,15 +41,27 @@ export class PhotoForm extends Component {
   };
 
   handleFile = fileUploaded => {
+    const previewUrl = URL.createObjectURL(fileUploaded)
     this.setState({
-      selectedFile: fileUploaded,
+      selectedFile: fileUploaded, previewUrl
     })
   };
 
   render() {
     const { step } = this.state;
-    const { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso } = this.state;
-    const values = { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso };
+    const {
+      title,
+      location,
+      dateTaken,
+      softwareUsed,
+      cameraModel,
+      cameraLens,
+      aperture,
+      shutterSpeed,
+      iso,
+      previewUrl
+    } = this.state;
+    const values = { title, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso, previewUrl };
 
     switch (step) {
       case 1:
@@ -59,6 +71,7 @@ export class PhotoForm extends Component {
             handleChange={this.handleChange}
             values={values}
             handleFile={this.handleFile}
+            previewUrl={previewUrl}
           />
         );
       case 2:
