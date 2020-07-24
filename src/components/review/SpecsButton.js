@@ -46,13 +46,11 @@ export default function SpecsButton() {
                 }}
             >
                 <Typography className={classes.typography}>
-
-                    {/* The content of the Popover. */}
-
-                    hi
-                    <ExifData />
-
-
+                    <p>Camera Model:</p>
+                    <p>Camera Lens:</p>
+                    <p>Aperture:</p>
+                    <p>Shutter Speed:</p>
+                    <p>ISO:</p>
                 </Typography>
             </Popover>
         </div>

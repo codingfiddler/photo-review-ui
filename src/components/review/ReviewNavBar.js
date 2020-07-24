@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import logo from "../../assets/logo.png"
+import AccountCircle from "@material-ui/icons/AccountCircle"
+import Link from "react-router-dom/Link"
 
 //Styling of the components
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +42,11 @@ export default function ReviewNavBar() {
               />
             </IconButton>
           </Typography>
-
+          <Link to="/userProfile">
+            <IconButton>
+              <AccountCircle fontSize="large" style={{ color: "#32e0c4" }} />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

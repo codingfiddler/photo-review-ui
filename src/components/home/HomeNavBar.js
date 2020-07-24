@@ -86,7 +86,7 @@ export default function HomeNavBar() {
             </IconButton>
           </Typography>
 
-          <Link to="/uploadPhoto">
+          {/* <Link to="/uploadPhoto">
             <Button
               style={{ backgroundColor: "#32e0c4", color: "white" }}
               variant="contained"
@@ -106,10 +106,10 @@ export default function HomeNavBar() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
+            /> */}
+          {/* </div> */}
         </Toolbar>
       </AppBar>
-    </div>
+    </div >
   );
 }
