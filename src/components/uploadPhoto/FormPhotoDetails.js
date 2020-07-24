@@ -16,12 +16,12 @@ class FormPhotoDetails extends Component {
     const { values, handleChange } = this.props;
     return (
       <>
-        <br /><br />
-        <Box display="flex" flexDirection="row" width="100%">
+        <Box display="flex" flexDirection="row" width="100%" style={{ paddingTop: "50px" }}>
 
           <Box p={1} width="100%" style={{ paddingRight: "30px" }}>
-            <h3>Please upload a Photo</h3>
-            <img src={this.props.previewUrl} width="300px" height="287px" />
+            <h3>Please Upload a Photo</h3>
+
+            <img src={this.props.previewUrl} width="100%" height="auto" />
             <FileUploader handleFile={this.props.handleFile} />
           </Box>
 

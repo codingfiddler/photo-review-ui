@@ -34,7 +34,7 @@ class CommentArea extends Component {
             text: newComment,
             votes: 0,
         };
-
+        console.log("posting comment")
         axios
             .post('http://localhost:5000/comment', data)
             .then(() => {
@@ -42,20 +42,21 @@ class CommentArea extends Component {
                     username: '',
                     newComment: '',
                 });
+                console.log("comment posted")
             })
             .catch(error => console.log(error));
-
-        // axios
-        // .post(`http://localhost:5000/photos/${photoID}/comment`, data)
-        // .then(response => {
-        //     const { username, newComment } = response.data;
-        //     this.setState({
-        //         username: '',
-        //         newComment: '',
-        //     });
-        // })
-        // .catch(error => console.log(error));
     };
+
+    // axios
+    // .post(`http://localhost:5000/photos/${photoID}/comment`, data)
+    // .then(response => {
+    //     const { username, newComment } = response.data;
+    //     this.setState({
+    //         username: '',
+    //         newComment: '',
+    //     });
+    // })
+    // .catch(error => console.log(error));
 
     vote = (id, num) => {
         axios.post('http://localhost:5000/vote', {
@@ -114,10 +115,10 @@ class CommentArea extends Component {
 
             <div class="ui comments">
                 <div class="comment">
-                    <a class="avatar"><img src="https://placekitten.com/50/50" /></a>
+                    <a class="avatar"><img src="https://img.icons8.com/cotton/2x/person-male--v2.png" /></a>
                     <div class="content">
                         <a class="author">{e.name}</a>
-                        <div class="metadata">Date will go here</div>
+                        <div class="metadata">07/23/2020</div>
                         <div class="text">{e.text}</div>
                         <div className="actions" style={{ display: "flex" }}>
                             <div className="vote-buttons">
@@ -167,7 +168,7 @@ class CommentArea extends Component {
                             value={newComment}
                             onChange={this.updateInput}
                         />
-                        <Button style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
+                        <Button type="submit" style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
                     </form>
                 </section>
                 <h2>Reviews</h2>

@@ -16,7 +16,7 @@ export class PhotoForm extends Component {
     aperture: "",
     shutterSpeed: "",
     iso: "",
-    previewUrl: "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+    previewUrl: "https://i0.wp.com/theturf.com.au/wp-content/uploads/2016/05/placeholder.png?ssl=1"
   };
 
   // Proceed to next step

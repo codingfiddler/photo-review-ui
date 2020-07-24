@@ -10,16 +10,16 @@ class PhotoHeader extends React.Component {
         return (
             <div className="photoHeader" style={{ padding: "30px" }}>
                 <div>
-                    <h1>Photo Title</h1>
+                    <h1>Look Through</h1>
                 </div>
                 <div>
-                    <h5>Taken by: username</h5>
+                    <h5>Taken by: @kathyJennings</h5>
                 </div>
                 <div style={{ display: "flex" }}>
                     <ScheduleIcon style={{ paddingRight: "5px" }} />
-                    <p>mm/dd/yyyy</p>
+                    <p>07/20/2020</p>
                     <LocationOnIcon style={{ paddingLeft: "5px" }} />
-                    <p>Some location here </p>
+                    <p>New York City </p>
                 </div>
 
                 <SpecsButton />
