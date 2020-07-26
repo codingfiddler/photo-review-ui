@@ -7,7 +7,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from 'react-router-dom/Link'
 import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SignInSide() {
+export default function SignIn() {
     const classes = useStyles();
 
     return (
@@ -90,14 +89,10 @@ export default function SignInSide() {
                             </Button>
                         </Link>
                         <Grid container>
-                            <Grid item xs>
-                                <Link href="#" variant="body2" style={{ color: 'black' }}>
-                                    Forgot password?
-                                </Link>
-                            </Grid>
+
                             <Grid item>
-                                <Link href="#" variant="body2" style={{ color: 'black' }}>
-                                    {"Don't have an account? Sign Up"}
+                                <Link to="/signUp" variant="body2" style={{ color: 'black' }}>
+                                    <p>Don't have an account? Sign Up</p>
                                 </Link>
                             </Grid>
                         </Grid>

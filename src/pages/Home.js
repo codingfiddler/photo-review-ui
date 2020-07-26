@@ -1,12 +1,13 @@
 import React from 'react'
 import HomeNavBar from '../components/home/HomeNavBar'
-import Login from "../components/home/Login"
+import SignIn from "../components/home/SignIn"
+
 class Home extends React.Component {
     render() {
         return (
             <div>
                 <HomeNavBar />
-                <Login />
+                <SignIn />
             </div>
         )
     }
