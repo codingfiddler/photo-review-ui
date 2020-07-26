@@ -9,6 +9,7 @@ import UserProfile from "./pages/UserProfile";
 import EditUser from "./pages/EditUser";
 import Review from "./pages/Review";
 import Footer from "./components/Footer";
+import SignUp from "./components/home/SignUp";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/home" component={Home} />
+              <Route path="/signUp" component={SignUp} />
               <Route path="/explore" component={Explore} />
               <Route path="/uploadPhoto" component={UploadPhoto} />
               <Route path="/userProfile" component={UserProfile} />
@@ -36,7 +38,6 @@ class App extends React.Component {
               <Route path="/review/:photoId" component={Review} />
             </Switch>
           </Router>
-          {/* <Explore information={this.state.explore} /> */}
         </Container>
         <Footer />
       </>
