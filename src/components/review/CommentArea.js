@@ -145,41 +145,40 @@ class CommentArea extends Component {
 
         return (
             <div className="App">
-                <Box display="flex" flexDirection="row" width="100%" padding="30px">
-                    <Box p={1} width="50%">
-                        <h2>Leave a Review</h2>
-                        <hr />
-                        <section className="comments-form">
-                            <form onSubmit={this.postComment}>
-                                <label htmlFor="username">Your Name:</label>
-                                <input
-                                    placeholder="Please enter your name"
-                                    className="username"
-                                    name="username"
-                                    id="username"
-                                    type="name"
-                                    value={username}
-                                    onChange={this.updateInput}
-                                />
 
-                                <label htmlFor="new-comment">Review:</label>
-                                <textarea
-                                    placeholder="Please leave positive and constructive reviews"
-                                    className="comment"
-                                    name="newComment"
-                                    id="new-comment"
-                                    value={newComment}
-                                    onChange={this.updateInput}
-                                />
-                                <Button type="submit" style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
-                            </form>
-                        </section>
-                    </Box>
-                    <Box p={1} width="50%">
-                        <h2>Reviews</h2>
-                        <hr />
-                        <section className="comments-section">{userComments}</section>
-                    </Box>
+                <Box p={1} width="100%">
+                    <h2>Leave a Review</h2>
+                    <hr />
+                    <section className="comments-form">
+                        <form onSubmit={this.postComment}>
+                            <label htmlFor="username">Your Name:</label>
+                            <input
+                                placeholder="Please enter your name"
+                                className="username"
+                                name="username"
+                                id="username"
+                                type="name"
+                                value={username}
+                                onChange={this.updateInput}
+                            />
+
+                            <label htmlFor="new-comment">Review:</label>
+                            <textarea
+                                placeholder="Please leave positive and constructive reviews"
+                                className="comment"
+                                name="newComment"
+                                id="new-comment"
+                                value={newComment}
+                                onChange={this.updateInput}
+                            />
+                            <Button type="submit" style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
+                        </form>
+                    </section>
+                </Box>
+                <Box p={1} width="100%">
+                    <h2>Reviews</h2>
+                    <hr />
+                    <section className="comments-section">{userComments}</section>
                 </Box>
             </div >
         );
