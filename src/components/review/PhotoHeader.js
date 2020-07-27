@@ -8,7 +8,7 @@ import SpecsButton from './SpecsButton';
 class PhotoHeader extends React.Component {
     render() {
         return (
-            <div className="photoHeader" style={{ padding: "30px" }}>
+            <div className="photoHeader" style={{ padding: "30px", backgroundColor: "white" }}>
                 <div>
                     <h1>Look Through</h1>
                 </div>

@@ -6,6 +6,10 @@ import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PhotoContainer from "../components/explore/PhotoContainer"
+import ReviewForm from "../components/review/ReviewForm"
+import Container from '@material-ui/core/Container'
+import ReviewList from "../components/review/ReviewList"
+
 function Review(props) {
 
     // let { photoId } = useParams()
@@ -28,18 +32,23 @@ function Review(props) {
     return (
         <div>
             <ReviewNavBar />
-            <PhotoHeader />
-            <Box display="flex" flexDirection="row" width="100%">
-                <Box p={1} width="50%">
-                    <img width="100%" src="https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
-                    {/* //replace with {photo.url} */}
-                </Box>
-                <Box p={1} width="50%">
-                    <CommentArea />
-                </Box>
-            </Box>
+            <Container maxWidth="md" style={{ padding: "30px 0px 30px 0px", }}>
 
-        </div >
+                <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
+                    <PhotoHeader />
+                    <div>
+                        <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src="https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
+                    </div>
+                </div>
+                {/* //replace with {photo.url} */}
+                <div style={{ padding: "30px", width: "100%", boxShadow: "1px 1px 5px", backgroundColor: "white" }}>
+                    <CommentArea />
+                    {/* <ReviewList /> */}
+                </div>
+            </Container>
+
+
+        </div>
     )
 }
 

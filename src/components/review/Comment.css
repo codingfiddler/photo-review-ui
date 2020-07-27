@@ -35,10 +35,10 @@ justify-content: space-between;
 }
 
 .comments-form{
-    background-color: #e0e0e0;
+    background-color: #eeeeee;
     padding: 10px;
     margin-bottom: 30px;
-    border-radius: 10px;
+    
 }
 
 .ui.comments {
@@ -280,9 +280,3 @@ justify-content: space-between;
 .ui.massive.comments {
   font-size: 1.71428571rem;
 }
-
-
-/*******************************
-         Theme Overrides
-*******************************/
-
