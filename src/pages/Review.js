@@ -32,20 +32,25 @@ function Review(props) {
     return (
         <div>
             <ReviewNavBar />
-            <Container maxWidth="md" style={{ padding: "30px 0px 30px 0px", }}>
+            <div style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')", backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+                <Container maxWidth="md" style={{ padding: "30px" }}>
 
-                <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
-                    <PhotoHeader />
-                    <div>
-                        <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src="https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
+                    <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
+                        <PhotoHeader />
+                        <div style={{ backgroundColor: "white" }}>
+                            <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src="https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
+                        </div>
                     </div>
-                </div>
-                {/* //replace with {photo.url} */}
-                <div style={{ padding: "30px", width: "100%", boxShadow: "1px 1px 5px", backgroundColor: "white" }}>
-                    <CommentArea />
-                    {/* <ReviewList /> */}
-                </div>
-            </Container>
+                    {/* //replace with {photo.url} */}
+                    <div style={{ padding: "30px", width: "100%", boxShadow: "1px 1px 5px", backgroundColor: "white" }}>
+                        <CommentArea />
+                        {/* <ReviewList /> */}
+                    </div>
+                </Container>
+            </div>
 
 
         </div>

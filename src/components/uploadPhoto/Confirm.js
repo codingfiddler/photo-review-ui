@@ -8,13 +8,20 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container'
-
+import axios from "axios"
 export class Confirm extends Component {
 
   continue = e => {
     e.preventDefault();
-    // PROCESS FORM //
     this.props.nextStep();
+    // axios
+    //   .post("", this.props)
+    //   .then(response => {
+    //     console.log(response)
+    //   })
+    //   .catch(error => {
+    //     console.log(error)
+    //   })
   };
 
   back = e => {
@@ -25,7 +32,7 @@ export class Confirm extends Component {
   render() {
 
     const {
-      values: { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso }
+      values: { title, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso }
     } = this.props;
 
     return (
