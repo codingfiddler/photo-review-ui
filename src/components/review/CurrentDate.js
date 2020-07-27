@@ -8,9 +8,9 @@ export class CurrentDate extends React.Component {
             date =
                 (today.getMonth() + 1) + '/' +
                 today.getDate() + '/' +
-                today.getFullYear() + ' ' +
-                today.getHours() + ':' +
-                today.getMinutes();
+                today.getFullYear()
+        //today.getHours() + ':' +
+        //today.getMinutes();
 
         this.state = {
             date: date

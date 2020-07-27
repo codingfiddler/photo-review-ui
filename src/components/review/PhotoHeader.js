@@ -16,6 +16,7 @@ class PhotoHeader extends React.Component {
                     <h5>Taken by: @kathyJennings</h5>
                 </div>
                 <div style={{ display: "flex" }}>
+
                     <ScheduleIcon style={{ paddingRight: "5px" }} />
                     <p>07/20/2020</p>
                     <LocationOnIcon style={{ paddingLeft: "5px" }} />
