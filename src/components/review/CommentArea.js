@@ -5,12 +5,13 @@ import './Comment.css';
 import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button'
-import { Comment, Form, Header } from 'semantic-ui-react'
-
+import Box from '@material-ui/core/Box';
+import CurrentDate from "./CurrentDate"
 
 class CommentArea extends Component {
+
+
     state = {
         username: '',
         newComment: '',
@@ -34,7 +35,7 @@ class CommentArea extends Component {
             text: newComment,
             votes: 0,
         };
-        console.log("posting comment")
+
         axios
             .post('http://localhost:5000/comment', data)
             .then(() => {
@@ -118,7 +119,7 @@ class CommentArea extends Component {
                     <a class="avatar"><img src="https://img.icons8.com/cotton/2x/person-male--v2.png" /></a>
                     <div class="content">
                         <a class="author">{e.name}</a>
-                        <div class="metadata">07/23/2020</div>
+                        <div class="metadata"><CurrentDate /></div>
                         <div class="text">{e.text}</div>
                         <div className="actions" style={{ display: "flex" }}>
                             <div className="vote-buttons">
@@ -144,36 +145,41 @@ class CommentArea extends Component {
 
         return (
             <div className="App">
-                <h2>Leave a Review</h2>
-                <hr />
-                <section className="comments-form">
-                    <form onSubmit={this.postComment}>
-                        <label htmlFor="username">Your Name:</label>
-                        <input
-                            placeholder="Please enter your name"
-                            className="username"
-                            name="username"
-                            id="username"
-                            type="name"
-                            value={username}
-                            onChange={this.updateInput}
-                        />
 
-                        <label htmlFor="new-comment">Review:</label>
-                        <textarea
-                            placeholder="Please leave positive and constructive reviews"
-                            className="comment"
-                            name="newComment"
-                            id="new-comment"
-                            value={newComment}
-                            onChange={this.updateInput}
-                        />
-                        <Button type="submit" style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
-                    </form>
-                </section>
-                <h2>Reviews</h2>
-                <hr />
-                <section className="comments-section">{userComments}</section>
+                <Box p={1} width="100%">
+                    <h2>Leave a Review</h2>
+                    <hr />
+                    <section className="comments-form">
+                        <form onSubmit={this.postComment}>
+                            <label htmlFor="username">Your Name:</label>
+                            <input
+                                placeholder="Please enter your name"
+                                className="username"
+                                name="username"
+                                id="username"
+                                type="name"
+                                value={username}
+                                onChange={this.updateInput}
+                            />
+
+                            <label htmlFor="new-comment">Review:</label>
+                            <textarea
+                                placeholder="Please leave positive and constructive reviews"
+                                className="comment"
+                                name="newComment"
+                                id="new-comment"
+                                value={newComment}
+                                onChange={this.updateInput}
+                            />
+                            <Button type="submit" style={{ backgroundColor: "#32e0c4", color: "white" }}>Submit</Button>
+                        </form>
+                    </section>
+                </Box>
+                <Box p={1} width="100%">
+                    <h2>Reviews</h2>
+                    <hr />
+                    <section className="comments-section">{userComments}</section>
+                </Box>
             </div >
         );
     }

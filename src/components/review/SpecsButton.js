@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import ExifData from "./ExifData"
+
 
 const useStyles = makeStyles((theme) => ({
     typography: {
@@ -28,7 +28,7 @@ export default function SpecsButton() {
 
     return (
         <div>
-            <Button variant="contained" onClick={handleClick} style={{ width: "15%" }}>
+            <Button variant="contained" onClick={handleClick} style={{ width: "30%" }}>
                 Camera Details
             </Button>
 
