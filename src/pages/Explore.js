@@ -2,7 +2,7 @@ import React from "react";
 import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
-import Link from 'react-router-dom/Link'
+import Link from "react-router-dom/Link";
 import ScrollUpArrow from "../components/ScrollUpArrow";
 
 class Explore extends React.Component {
@@ -12,135 +12,11 @@ class Explore extends React.Component {
       // store images that will be fetched from within component
       photos: [
         {
-          id: 1,
-          title: "White Rocks, Touch of Sunshine",
-          photographer: "@byTheLake",
+          username: "first_user",
+          title: "greek",
+          photo_id: 0,
           url:
-            "https://images.unsplash.com/photo-1595236332861-7553ef284422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 2,
-          title: "accusamus beatae ad facil",
-          photographer: "@concreteJungler",
-          url:
-            "https://images.unsplash.com/photo-1595230907762-54cfe6dbd901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80",
-        },
-        {
-          id: 3,
-          title: "Look Through",
-          photographer: "@kathyJennings",
-          url:
-            "https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
-        },
-        {
-          id: 4,
-          title: "Leaf Shadow",
-          photographer: "@shadowHunter",
-          url:
-            "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 5,
-          title: "Bread, Wine Glass, Fruit",
-          photographer: "@summerFunner",
-          url:
-            "https://images.unsplash.com/photo-1595232878814-74d5a59ed9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1282&q=80",
-        },
-        {
-          id: 7,
-          title: "Brown and Gray Mountains",
-          photographer: "@traveler",
-          url:
-            "https://images.unsplash.com/photo-1595232548387-101b19c0c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-        {
-          id: 8,
-          title: "Above the Clouds",
-          photographer: "@viewer10232",
-          url:
-            "https://images.unsplash.com/photo-1595181271233-35297004788d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-        },
-        {
-          id: 9,
-          title: "somewhere over the rainbow",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595169269500-1993571072e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-
-        {
-          id: 10,
-          title: "flowers, blue pot",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595162244081-72420b24fe6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 1,
-          title: "White Rocks, Touch of Sunshine",
-          photographer: "@byTheLake",
-          url:
-            "https://images.unsplash.com/photo-1595236332861-7553ef284422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 2,
-          title: "accusamus beatae ad facil",
-          photographer: "@concreteJungler",
-          title: "spark",
-          url:
-            "https://images.unsplash.com/photo-1595230907762-54cfe6dbd901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80",
-        },
-        {
-          id: 3,
-          title: "Look Through",
-          photographer: "@kathyJennings",
-          title: "colors",
-          url:
-            "https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
-        },
-        {
-          id: 4,
-          title: "Leaf Shadow",
-          photographer: "@shadowHunter",
-          title: "coffee",
-          url:
-            "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 5,
-          title: "Bread, Wine Glass, Fruit",
-          photographer: "@summerFunner",
-          url:
-            "https://images.unsplash.com/photo-1595232878814-74d5a59ed9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1282&q=80",
-        },
-        {
-          id: 7,
-          title: "Brown and Gray Mountains",
-          photographer: "@traveler",
-          url:
-            "https://images.unsplash.com/photo-1595232548387-101b19c0c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-        {
-          id: 8,
-          title: "Above the Clouds",
-          photographer: "@viewer10232",
-          url:
-            "https://images.unsplash.com/photo-1595181271233-35297004788d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-        },
-        {
-          id: 9,
-          title: "somewhere over the rainbow",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595169269500-1993571072e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-
-        {
-          id: 10,
-          title: "flowers, blue pot",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595162244081-72420b24fe6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+            "https://krino-photos.s3.amazonaws.com/FBEEECCF-02E2-45D4-BE04-432226465F01_hb9jlmr.jpeg",
         },
       ],
       information: {
@@ -152,7 +28,7 @@ class Explore extends React.Component {
     this.handleHover = this.handleHover.bind(this);
   }
 
-  handleHover() { }
+  handleHover() {}
 
   componentDidMount() {
     // https://api.thedogapi.com/v1/images/search?limit=3
