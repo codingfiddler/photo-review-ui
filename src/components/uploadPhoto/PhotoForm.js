@@ -17,7 +17,7 @@ export class PhotoForm extends Component {
     shutter_speed: "",
     iso: "",
     email: "",
-    photo: "https://i0.wp.com/theturf.com.au/wp-content/uploads/2016/05/placeholder.png?ssl=1"
+    photo: "https://i0.wp.com/theturf.com.au/wp-content/uploads/2016/05/placeholder.png?ssl=1",
   };
 
   // Proceed to next step
