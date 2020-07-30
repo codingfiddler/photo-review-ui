@@ -34,6 +34,7 @@
     "react-image-gallery": "^1.0.7",
     "react-imgix": "^9.0.2",
     "react-masonry-component": "^6.2.1",
+    "react-material-ui-form-validator": "^2.1.0",
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",

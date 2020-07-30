@@ -52,8 +52,6 @@ export class ReviewForm extends Component {
                                     placeholder="Please enter your name"
                                     className="username"
                                     name="username"
-                                    //id="username"
-                                    //type="name"
                                     value={username}
                                     onChange={this.handleChange}
                                 />
