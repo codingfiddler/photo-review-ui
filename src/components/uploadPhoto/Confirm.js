@@ -33,7 +33,7 @@ export class Confirm extends Component {
   render() {
 
     const {
-      values: { title, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso }
+      values: { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso }
     } = this.props;
 
     return (

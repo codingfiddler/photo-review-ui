@@ -9,25 +9,35 @@ import PhotoContainer from "../components/explore/PhotoContainer"
 import ReviewForm from "../components/review/ReviewForm"
 import Container from '@material-ui/core/Container'
 import ReviewList from "../components/review/ReviewList"
+import Alert from '@material-ui/lab/Alert';
 
 function Review(props) {
 
-    // let { photoId } = useParams()
-    // console.log(photoId)
+    this.state = {
+        error: false
+    }
 
-    // const riverPhoto = "https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+    let { photoId } = useParams()
+    console.log(photoId)
 
-    // const [photo, setPhoto] = useState(riverPhoto);
+    const riverPhoto = "https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+
+    const [photo, setPhoto] = useState(riverPhoto);
 
 
 
-    // useEffect(() => {
-    //     axios.get(myurl) //api
-    //         .then(response => {
-    //             const data = response.data
-    //             setPhoto(data)
-    //         })
-    // }, [])
+    useEffect(() => {
+        axios.get(`https://api.krino.fiddlingphotographer.com/users/upload/${photoId}/`)
+            .then(response => {
+                const data = response.data
+                setPhoto(data)
+            })
+            .catch(error => {
+                this.setState({
+                    error: true
+                });
+            })
+    }, [])
 
     return (
         <div>
@@ -37,16 +47,17 @@ function Review(props) {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <Container maxWidth="md" style={{ padding: "30px" }}>
+                    {this.state.error && <Alert severity="error" > We are sorry, but we couldn't find information about this picture, please try again later</Alert >}
 
                     <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
-                        <PhotoHeader />
+                        <PhotoHeader photo={photo} />
                         <div style={{ backgroundColor: "white" }}>
-                            <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src="https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
+                            <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src={photo.photo} />
                         </div>
                     </div>
-                    {/* //replace with {photo.url} */}
+
                     <div style={{ padding: "30px", width: "100%", boxShadow: "1px 1px 5px", backgroundColor: "white" }}>
-                        <CommentArea />
+                        <CommentArea photo={photo} />
                         {/* <ReviewList /> */}
                     </div>
                 </Container>

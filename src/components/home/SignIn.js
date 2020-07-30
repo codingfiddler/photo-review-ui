@@ -20,6 +20,7 @@ class SignIn extends React.Component {
         this.state = {
             email: "",
             password: "",
+            error: false,
         }
     }
 
@@ -39,9 +40,11 @@ class SignIn extends React.Component {
                 this.props.history.push('/explore');
             })
             .catch(error => {
-                console.log(error)
-                    < Alert severity = "error" > This is an error alert — check it out!</Alert >
+                this.setState({
+                    error: true
+                });
             })
+
 
 
     }
@@ -115,6 +118,8 @@ class SignIn extends React.Component {
                                     </Link>
                                 </Grid>
                             </Grid>
+
+                            {this.state.error && <Alert severity="error" > Your email or password is incorrect</Alert >}
                         </form>
                     </div>
                 </Grid>
