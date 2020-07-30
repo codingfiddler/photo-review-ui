@@ -8,36 +8,10 @@ import axios from "axios"
 
 class PhotoHeader extends React.Component {
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            title: "",
-            username: "",
-            taken_date: "",
-            location_taken: ""
-        }
-    }
-
-    componentDidMount() {
-        axios.get("https://api.krino.fiddlingphotographer.com/users/upload/")
-            .then(response => {
-                console.log(response.data)
-                this.setState({
-                    title: response.data.title,
-                    username: response.data.username,
-                    dateTaken: response.data.taken_date,
-                    location: response.data.location_taken,
-                })
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
 
     render() {
 
-        const { title, username, taken_date, location_taken } = this.state
+        const { title, username, taken_date, location_taken } = this.props.photo
 
         return (
             <div className="photoHeader" style={{ padding: "30px", backgroundColor: "white" }}>

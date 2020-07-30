@@ -155,7 +155,8 @@ class Explore extends React.Component {
 
   componentDidMount() {
     // https://api.thedogapi.com/v1/images/search?limit=3
-    fetch("https://jsonplaceholder.typicode.com/albums/1/photos").then(
+
+    fetch("https://api.krino.fiddlingphotographer.com/users/upload/").then(
       (res) => {
         if (!res.ok) {
           throw Error("error fetching cute doggie");
