@@ -37,7 +37,7 @@ class PhotoHeader extends React.Component {
 
     render() {
 
-        const { title, username, dateTaken, location } = this.state
+        const { title, username, taken_date, location_taken } = this.state
 
         return (
             <div className="photoHeader" style={{ padding: "30px", backgroundColor: "white" }}>
