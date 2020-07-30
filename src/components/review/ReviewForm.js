@@ -11,7 +11,8 @@ export class ReviewForm extends Component {
 
         this.state = {
             username: "",
-            comment: ""
+            comment: "",
+            date: <CurrentDate />,
         }
     }
 
