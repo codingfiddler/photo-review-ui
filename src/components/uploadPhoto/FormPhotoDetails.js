@@ -60,6 +60,7 @@ class FormPhotoDetails extends Component {
               onChange={handleChange('dateTaken')}
               defaultValue={values.dateTaken}
               margin="normal"
+              InputLabelProps={{ shrink: true }}
               fullWidth
             />
             <br />

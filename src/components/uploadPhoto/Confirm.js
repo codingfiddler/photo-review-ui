@@ -13,15 +13,17 @@ export class Confirm extends Component {
 
   continue = e => {
     e.preventDefault();
-    this.props.nextStep();
+    console.log(this.props.values)
     // axios
-    //   .post("", this.props)
+    //   .post("", this.props.values)
     //   .then(response => {
     //     console.log(response)
     //   })
     //   .catch(error => {
     //     console.log(error)
     //   })
+
+    this.props.nextStep();
   };
 
   back = e => {
