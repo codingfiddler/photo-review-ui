@@ -14,15 +14,15 @@ class PhotoHeader extends React.Component {
         this.state = {
             title: "",
             username: "",
-            dateTaken: "",
-            location: ""
+            taken_date: "",
+            location_taken: ""
         }
     }
 
     componentDidMount() {
         axios.get("https://api.krino.fiddlingphotographer.com/users/upload/")
             .then(response => {
-                console.log(response)
+                console.log(response.data)
                 this.setState({
                     title: response.data.title,
                     username: response.data.username,
@@ -50,9 +50,9 @@ class PhotoHeader extends React.Component {
                 <div style={{ display: "flex" }}>
 
                     <ScheduleIcon style={{ paddingRight: "5px" }} />
-                    <p>{dateTaken}</p>
+                    <p>{taken_date}</p>
                     <LocationOnIcon style={{ paddingLeft: "5px" }} />
-                    <p>{location} </p>
+                    <p>{location_taken} </p>
                 </div>
 
                 <SpecsButton />
