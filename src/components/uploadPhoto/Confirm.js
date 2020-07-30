@@ -14,16 +14,15 @@ export class Confirm extends Component {
   continue = e => {
     e.preventDefault();
     console.log(this.props.values)
-    // axios
-    //   .post("", this.props.values)
-    //   .then(response => {
-    //     console.log(response)
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
-
-    this.props.nextStep();
+    axios
+      .post("https://api.krino.fiddlingphotographer.com/users/upload/", this.props.values)
+      .then(response => {
+        console.log(response.data)
+        this.props.nextStep();
+      })
+      .catch(error => {
+        console.log(error)
+      })
   };
 
   back = e => {
