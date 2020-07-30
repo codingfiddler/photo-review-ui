@@ -22,7 +22,8 @@ class SignUp extends React.Component {
             email: "",
             password: "",
             location: "",
-            bio: ""
+            bio: "",
+            profile_image: "",
         }
     }
 
