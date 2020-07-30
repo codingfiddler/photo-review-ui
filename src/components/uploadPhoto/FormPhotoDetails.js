@@ -47,8 +47,8 @@ class FormPhotoDetails extends Component {
             <TextField
               placeholder="Enter the location"
               label="Location"
-              onChange={handleChange('location')}
-              defaultValue={values.location}
+              onChange={handleChange('location_taken')}
+              defaultValue={values.location_taken}
               margin="normal"
               fullWidth
             />
@@ -57,18 +57,18 @@ class FormPhotoDetails extends Component {
               type="date"
               placeholder="Enter the date "
               label="Date Taken"
-              onChange={handleChange('dateTaken')}
-              defaultValue={values.dateTaken}
+              onChange={handleChange('taken_date')}
+              defaultValue={values.taken_date}
               margin="normal"
-              InputLabelProps={{ shrink: false }}
+              InputLabelProps={{ shrink: true }}
               fullWidth
             />
             <br />
             <TextField
               placeholder="Enter the software used"
               label="Editing Software"
-              onChange={handleChange('softwareUsed')}
-              defaultValue={values.softwareUsed}
+              onChange={handleChange('software_used')}
+              defaultValue={values.software_used}
               margin="normal"
               fullWidth
             />

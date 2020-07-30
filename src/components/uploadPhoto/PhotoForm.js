@@ -52,17 +52,17 @@ export class PhotoForm extends Component {
     const { step } = this.state;
     const {
       title,
-      location,
-      dateTaken,
-      softwareUsed,
-      cameraModel,
-      cameraLens,
+      location_taken,
+      taken_date,
+      software_used,
+      camera_used,
+      camera_lens,
       aperture,
-      shutterSpeed,
+      shutter_speed,
       iso,
       photo,
     } = this.state;
-    const values = { title, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso, photo };
+    const values = { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso, photo };
 
     switch (step) {
       case 1:

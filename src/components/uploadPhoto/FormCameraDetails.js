@@ -24,8 +24,8 @@ export class FormCameraDetails extends Component {
           <TextField
             placeholder="Enter the camera model"
             label="Camera Model"
-            onChange={handleChange('cameraModel')}
-            defaultValue={values.cameraModel}
+            onChange={handleChange('camera_used')}
+            defaultValue={values.camera_used}
             margin="normal"
             fullWidth
           />
@@ -33,8 +33,8 @@ export class FormCameraDetails extends Component {
           <TextField
             placeholder="Enter the camera lens"
             label="Camera Lens"
-            onChange={handleChange('cameraLens')}
-            defaultValue={values.cameraLens}
+            onChange={handleChange('camera_lens')}
+            defaultValue={values.camera_lens}
             margin="normal"
             fullWidth
           />
@@ -51,8 +51,8 @@ export class FormCameraDetails extends Component {
           <TextField
             placeholder="Enter the Shutter Speed"
             label="Shutter Speed"
-            onChange={handleChange('shutterSpeed')}
-            defaultValue={values.shutterSpeed}
+            onChange={handleChange('shutter_speed')}
+            defaultValue={values.shutter_speed}
             margin="normal"
             fullWidth
           />
