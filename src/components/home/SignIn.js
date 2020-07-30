@@ -34,12 +34,13 @@ class SignIn extends React.Component {
         axios
             .post("https://api.krino.fiddlingphotographer.com/users/login/", this.state)
             .then(response => {
-                console.log(response)
+                console.log(response.data)
+                this.props.history.push('/explore');
             })
             .catch(error => {
                 console.log(error)
             })
-        this.props.history.push('/explore');
+
 
     }
 
