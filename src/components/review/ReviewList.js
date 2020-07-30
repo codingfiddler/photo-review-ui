@@ -6,6 +6,33 @@ import Box from '@material-ui/core/Box'
 import axios from "axios"
 
 class ReviewList extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            username: "",
+            comment: "",
+            date: "",
+        }
+    }
+
+    componentDidMount() {
+        axios.get("https://api.krino.fiddlingphotographer.com/users/upload/")
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    title: response.data.title,
+                    username: response.data.username,
+                    dateTaken: response.data.taken_date,
+                    location: response.data.location_taken,
+                })
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     render() {
         return (
             <>

@@ -38,7 +38,7 @@ class SignUp extends React.Component {
         axios
             .post("https://api.krino.fiddlingphotographer.com/users/signup/", this.state)
             .then(response => {
-                console.log(response)
+                console.log(response.data)
             })
             .catch(error => {
                 console.log(error)
