@@ -56,23 +56,23 @@ export class Confirm extends Component {
                 </TableRow>
                 <TableRow>
                   <TableCell>Location</TableCell>
-                  <TableCell align="right">{location}</TableCell>
+                  <TableCell align="right">{location_taken}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Date</TableCell>
-                  <TableCell align="right">{dateTaken}</TableCell>
+                  <TableCell align="right">{taken_date}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Editing Software</TableCell>
-                  <TableCell align="right">{softwareUsed}</TableCell>
+                  <TableCell align="right">{software_used}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Camera Model</TableCell>
-                  <TableCell align="right">{cameraModel}</TableCell>
+                  <TableCell align="right">{camera_used}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Camera Lens</TableCell>
-                  <TableCell align="right">{cameraLens}</TableCell>
+                  <TableCell align="right">{camera_lens}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Aperture</TableCell>
@@ -80,7 +80,7 @@ export class Confirm extends Component {
                 </TableRow>
                 <TableRow>
                   <TableCell>Shutter Speed</TableCell>
-                  <TableCell align="right">{shutterSpeed}</TableCell>
+                  <TableCell align="right">{shutter_speed}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>ISO</TableCell>

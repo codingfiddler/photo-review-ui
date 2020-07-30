@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import axios from "axios"
+import Alert from '@material-ui/lab/Alert';
 
 class SignIn extends React.Component {
 
@@ -39,6 +40,7 @@ class SignIn extends React.Component {
             })
             .catch(error => {
                 console.log(error)
+                    < Alert severity = "error" > This is an error alert — check it out!</Alert >
             })
 
 
