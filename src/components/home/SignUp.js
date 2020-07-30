@@ -35,7 +35,6 @@ class SignUp extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        console.log(this.state)
         axios
             .post("https://api.krino.fiddlingphotographer.com/users/signup/", this.state)
             .then(response => {

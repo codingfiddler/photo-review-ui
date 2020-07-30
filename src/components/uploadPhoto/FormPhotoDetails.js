@@ -21,7 +21,7 @@ class FormPhotoDetails extends Component {
           <Box p={1} width="100%" style={{ paddingRight: "30px" }}>
             <h3>Please Upload a Photo</h3>
 
-            <img src={this.props.previewUrl} width="100%" height="auto" />
+            <img src={this.props.photo} width="100%" height="auto" />
             <FileUploader handleFile={this.props.handleFile} />
           </Box>
 
@@ -60,7 +60,7 @@ class FormPhotoDetails extends Component {
               onChange={handleChange('dateTaken')}
               defaultValue={values.dateTaken}
               margin="normal"
-              InputLabelProps={{ shrink: true }}
+              InputLabelProps={{ shrink: false }}
               fullWidth
             />
             <br />
