@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import FileUploader from './FileUploader';
-import Box from '@material-ui/core/Box';
+
+import React, { Component } from "react";
+import Dialog from "@material-ui/core/Dialog";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import FileUploader from "./FileUploader";
 
 class FormPhotoDetails extends Component {
 
@@ -10,7 +12,6 @@ class FormPhotoDetails extends Component {
     e.preventDefault();
     this.props.nextStep();
   };
-
 
   render() {
     const { values, handleChange } = this.props;

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import FormPhotoDetails from './FormPhotoDetails';
-import FormCameraDetails from './FormCameraDetails';
-import Confirm from './Confirm';
-import Submitted from './Submitted';
+import React, { Component } from "react";
+import FormPhotoDetails from "./FormPhotoDetails";
+import FormCameraDetails from "./FormCameraDetails";
+import Confirm from "./Confirm";
+import Submitted from "./Submitted";
 
 export class PhotoForm extends Component {
   state = {
@@ -24,7 +24,7 @@ export class PhotoForm extends Component {
   nextStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step + 1
+      step: step + 1,
     });
   };
 
@@ -32,12 +32,12 @@ export class PhotoForm extends Component {
   prevStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step - 1
+      step: step - 1,
     });
   };
 
   // Handle fields change
-  handleChange = input => e => {
+  handleChange = (input) => (e) => {
     this.setState({ [input]: e.target.value });
   };
 
@@ -63,6 +63,7 @@ export class PhotoForm extends Component {
       photo,
     } = this.state;
     const values = { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso, photo };
+
 
     switch (step) {
       case 1:
@@ -95,7 +96,7 @@ export class PhotoForm extends Component {
       case 4:
         return <Submitted />;
       default:
-        (console.log('This is a multi-step form built with React.'))
+        console.log("This is a multi-step form built with React.");
     }
   }
 }
