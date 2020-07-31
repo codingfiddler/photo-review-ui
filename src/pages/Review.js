@@ -9,13 +9,8 @@ import PhotoContainer from "../components/explore/PhotoContainer"
 import ReviewForm from "../components/review/ReviewForm"
 import Container from '@material-ui/core/Container'
 import ReviewList from "../components/review/ReviewList"
-import Alert from '@material-ui/lab/Alert';
 
 function Review(props) {
-
-    this.state = {
-        error: false
-    }
 
     let { photoId } = useParams()
     console.log(photoId)
@@ -33,9 +28,7 @@ function Review(props) {
                 setPhoto(data)
             })
             .catch(error => {
-                this.setState({
-                    error: true
-                });
+                console.log(error)
             })
     }, [])
 
@@ -47,7 +40,6 @@ function Review(props) {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <Container maxWidth="md" style={{ padding: "30px" }}>
-                    {this.state.error && <Alert severity="error" > We are sorry, but we couldn't find information about this picture, please try again later</Alert >}
 
                     <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
                         <PhotoHeader photo={photo} />
