@@ -31,7 +31,7 @@ class App extends React.Component {
               <Route path="/home" component={Home} />
               <Route path="/explore" component={Explore} />
               <Route path="/uploadPhoto" component={UploadPhoto} />
-              <Route path="/userProfile" component={UserProfile} />
+              <Route path="/userProfile/:user_id/" component={UserProfile} />
               <Route path="/editUser" component={EditUser} />
               <Route path="/review" component={Review} />
             </Switch>

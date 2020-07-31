@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import FormPhotoDetails from './FormPhotoDetails';
-import FormCameraDetails from './FormCameraDetails';
-import Confirm from './Confirm';
-import Submitted from './Submitted';
+import React, { Component } from "react";
+import FormPhotoDetails from "./FormPhotoDetails";
+import FormCameraDetails from "./FormCameraDetails";
+import Confirm from "./Confirm";
+import Submitted from "./Submitted";
 
 export class PhotoForm extends Component {
   state = {
@@ -16,14 +16,14 @@ export class PhotoForm extends Component {
     cameraLens: "",
     aperture: "",
     shutterSpeed: "",
-    iso: ""
+    iso: "",
   };
 
   // Proceed to next step
   nextStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step + 1
+      step: step + 1,
     });
   };
 
@@ -31,25 +31,47 @@ export class PhotoForm extends Component {
   prevStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step - 1
+      step: step - 1,
     });
   };
 
   // Handle fields change
-  handleChange = input => e => {
+  handleChange = (input) => (e) => {
     this.setState({ [input]: e.target.value });
   };
 
-  handleFile = fileUploaded => {
+  handleFile = (fileUploaded) => {
     this.setState({
       selectedFile: fileUploaded,
-    })
+    });
   };
 
   render() {
     const { step } = this.state;
-    const { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso } = this.state;
-    const values = { title, description, location, dateTaken, softwareUsed, cameraModel, cameraLens, aperture, shutterSpeed, iso };
+    const {
+      title,
+      description,
+      location,
+      dateTaken,
+      softwareUsed,
+      cameraModel,
+      cameraLens,
+      aperture,
+      shutterSpeed,
+      iso,
+    } = this.state;
+    const values = {
+      title,
+      description,
+      location,
+      dateTaken,
+      softwareUsed,
+      cameraModel,
+      cameraLens,
+      aperture,
+      shutterSpeed,
+      iso,
+    };
 
     switch (step) {
       case 1:
@@ -81,7 +103,7 @@ export class PhotoForm extends Component {
       case 4:
         return <Submitted />;
       default:
-        (console.log('This is a multi-step form built with React.'))
+        console.log("This is a multi-step form built with React.");
     }
   }
 }
