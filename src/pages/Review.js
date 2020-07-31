@@ -24,6 +24,7 @@ function Review(props) {
     useEffect(() => {
         axios.get(`https://api.krino.fiddlingphotographer.com/users/upload/${photo_id}/`)
             .then(response => {
+                console.log(response)
                 const data = response.data
                 setPhoto(data)
             })
@@ -44,7 +45,7 @@ function Review(props) {
                     <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
                         <PhotoHeader photo={photo} />
                         <div style={{ backgroundColor: "white" }}>
-                            <img style={{ padding: "0px 10px 10px 10px" }} width="50%" src={photo.photo} />
+                            <img style={{ padding: "0px 30px 30px 30px", alignContent: "center" }} width="100%" src={photo.photo} />
                         </div>
                     </div>
 
