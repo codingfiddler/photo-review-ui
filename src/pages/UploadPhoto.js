@@ -7,10 +7,10 @@ class UploadPhoto extends React.Component {
     render() {
         return (
             <div>
-                <UploadNavBar/>
-                <Container maxWidth="sm">
+                <UploadNavBar />
+                <Container maxWidth="md">
                     <div>
-                    <PhotoForm/>
+                        <PhotoForm />
                     </div>
                 </Container>
             </div>

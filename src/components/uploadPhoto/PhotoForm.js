@@ -8,15 +8,16 @@ export class PhotoForm extends Component {
   state = {
     step: 1,
     title: "",
-    //description: "",
-    location: "",
-    dateTaken: "",
-    softwareUsed: "",
-    cameraModel: "",
-    cameraLens: "",
+    location_taken: "",
+    taken_date: "",
+    software_used: "",
+    camera_used: "",
+    camera_lens: "",
     aperture: "",
-    shutterSpeed: "",
+    shutter_speed: "",
     iso: "",
+    email: "",
+    photo: "https://i0.wp.com/theturf.com.au/wp-content/uploads/2016/05/placeholder.png?ssl=1",
   };
 
   // Proceed to next step
@@ -40,38 +41,29 @@ export class PhotoForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
-  handleFile = (fileUploaded) => {
+  handleFile = fileUploaded => {
+    const photo = URL.createObjectURL(fileUploaded)
     this.setState({
-      selectedFile: fileUploaded,
-    });
+      selectedFile: fileUploaded, photo
+    })
   };
 
   render() {
     const { step } = this.state;
     const {
       title,
-      description,
-      location,
-      dateTaken,
-      softwareUsed,
-      cameraModel,
-      cameraLens,
+      location_taken,
+      taken_date,
+      software_used,
+      camera_used,
+      camera_lens,
       aperture,
-      shutterSpeed,
+      shutter_speed,
       iso,
+      photo,
     } = this.state;
-    const values = {
-      title,
-      description,
-      location,
-      dateTaken,
-      softwareUsed,
-      cameraModel,
-      cameraLens,
-      aperture,
-      shutterSpeed,
-      iso,
-    };
+    const values = { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso, photo };
+
 
     switch (step) {
       case 1:
@@ -81,6 +73,7 @@ export class PhotoForm extends Component {
             handleChange={this.handleChange}
             values={values}
             handleFile={this.handleFile}
+            photo={photo}
           />
         );
       case 2:

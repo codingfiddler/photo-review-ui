@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import Dialog from "@material-ui/core/Dialog";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
@@ -6,7 +7,8 @@ import Button from "@material-ui/core/Button";
 import FileUploader from "./FileUploader";
 
 class FormPhotoDetails extends Component {
-  continue = (e) => {
+
+  continue = e => {
     e.preventDefault();
     this.props.nextStep();
   };
@@ -14,61 +16,75 @@ class FormPhotoDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <MuiThemeProvider>
-        <>
-          <br />
-          <FileUploader handleFile={this.props.handleFile} />
-          <h3>Please Enter Photo Details</h3>
+      <>
+        <Box display="flex" flexDirection="row" width="100%" style={{ paddingTop: "50px" }}>
 
-          <TextField
-            placeholder="Enter the Title"
-            label="Title"
-            onChange={handleChange("title")}
-            defaultValue={values.title}
-            margin="normal"
-            fullWidth
-          />
-          <br />
-          <TextField
-            placeholder="Enter the location"
-            label="Location"
-            onChange={handleChange("location")}
-            defaultValue={values.location}
-            margin="normal"
-            fullWidth
-          />
-          <br />
-          <TextField
-            type="date"
-            placeholder="Enter the date "
-            label="Date Taken"
-            onChange={handleChange("dateTaken")}
-            defaultValue={values.dateTaken}
-            margin="normal"
-            fullWidth
-          />
-          <br />
-          <TextField
-            placeholder="Enter the software used"
-            label="Editing Software"
-            onChange={handleChange("softwareUsed")}
-            defaultValue={values.softwareUsed}
-            margin="normal"
-            fullWidth
-          />
-          <br />
+          <Box p={1} width="100%" style={{ paddingRight: "30px" }}>
+            <h3>Please Upload a Photo</h3>
 
-          <br />
-          <Button
-            style={{ backgroundColor: "#32e0c4", width: "100%" }}
-            color="primary"
-            variant="contained"
-            onClick={this.continue}
-          >
-            Continue
-          </Button>
-        </>
-      </MuiThemeProvider>
+            <img src={this.props.photo} width="100%" height="auto" />
+            <FileUploader handleFile={this.props.handleFile} />
+          </Box>
+
+          <hr style={{
+            border: "none",
+            borderLeft: "1px solid hsla(200, 10%, 50%,100)",
+            height: "55vh",
+            width: "1px"
+          }} />
+
+          <Box p={1} width="100%" style={{ paddingLeft: "30px" }}>
+            <h3>Please Enter Photo Details</h3>
+
+            <TextField
+              placeholder="Enter the Title"
+              label="Title"
+              onChange={handleChange('title')}
+              defaultValue={values.title}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <TextField
+              placeholder="Enter the location"
+              label="Location"
+              onChange={handleChange('location_taken')}
+              defaultValue={values.location_taken}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+            <TextField
+              type="date"
+              placeholder="Enter the date "
+              label="Date Taken"
+              onChange={handleChange('taken_date')}
+              defaultValue={values.taken_date}
+              margin="normal"
+              InputLabelProps={{ shrink: true }}
+              fullWidth
+            />
+            <br />
+            <TextField
+              placeholder="Enter the software used"
+              label="Editing Software"
+              onChange={handleChange('software_used')}
+              defaultValue={values.software_used}
+              margin="normal"
+              fullWidth
+            />
+            <br />
+
+            <br />
+            <Button
+              style={{ backgroundColor: "#32e0c4", width: "100%" }}
+              color="primary"
+              variant="contained"
+              onClick={this.continue}
+            >Continue</Button>
+          </Box>
+        </Box>
+      </>
     );
   }
 }
