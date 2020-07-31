@@ -1,13 +1,19 @@
 import React from "react";
 
-export default function writeBio() {
+export default function writeBio({
+  full_name,
+  email,
+  location,
+  username,
+  bio,
+}) {
   return (
     <div class="container" style={{ textAlign: "center", lineHeight: "2px" }}>
-      <h3> John Doe </h3>
-      <p> @john.doe </p>
-      <p> Professional Photographer </p>
-      <p> Brooklyn, New York </p>
-      <p>doejohn@gmail.com</p>
+      <h3> {full_name} </h3>
+      <p> {email} </p>
+      <p> {username} </p>
+      <p> {location} </p>
+      <p> {bio} </p>
     </div>
   );
 }
