@@ -9,13 +9,32 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container'
 import axios from "axios"
+
 export class Confirm extends Component {
 
-  continue = e => {
+  readUploadedFileAsText = (inputFile) => {
+    const temporaryFileReader = new FileReader();
+    return new Promise((resolve, reject) => {
+      temporaryFileReader.onerror = () => {
+        temporaryFileReader.abort();
+        reject(new DOMException("Problem parsing input file."));
+      };
+      temporaryFileReader.onload = () => {
+        resolve(temporaryFileReader.result);
+      };
+      temporaryFileReader.readAsDataURL(inputFile);
+    });
+  };
+
+  continue = async e => {
     e.preventDefault();
-    console.log(this.props.values)
+    const fileContents = await this.readUploadedFileAsText(this.props.values.selectedFile)
+    console.log(fileContents)
     axios
-      .post("https://api.krino.fiddlingphotographer.com/users/upload/", this.props.values)
+      .post("https://api.krino.fiddlingphotographer.com/users/upload/", {
+        ...this.props.values,
+        photo: fileContents,
+      })
       .then(response => {
         console.log(response.data)
         this.props.nextStep();
