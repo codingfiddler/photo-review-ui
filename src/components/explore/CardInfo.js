@@ -6,7 +6,7 @@ export default function CardInfo(props) {
   return (
     <animated.div className="g-card-info" style={style}>
       <p className="g-card-title">{props.title}</p>
-      <p className="g-class-sub-title">{props.author}</p>
+      {/* <p className="g-class-sub-title">{props.author}</p> */}
     </animated.div>
   );
 }
