@@ -58,13 +58,11 @@ class FormPhotoDetails extends Component {
             />
             <br />
             <TextField
-              type="date"
-              placeholder="Enter the date "
+              placeholder="mm/dd/yyyy"
               label="Date Taken"
               onChange={handleChange('taken_date')}
               defaultValue={values.taken_date}
               margin="normal"
-              InputLabelProps={{ shrink: true }}
               fullWidth
             />
             <br />

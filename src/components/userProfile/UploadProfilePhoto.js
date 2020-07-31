@@ -57,7 +57,7 @@ export default function Upload() {
           }}
         />
       </div>
-      Click to Upload Profile Picture
+      <p style={{ fontSize: "10px" }}>Click to Upload Profile Picture</p>
     </div>
   );
 }

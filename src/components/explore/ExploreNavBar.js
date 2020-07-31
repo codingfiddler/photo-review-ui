@@ -106,7 +106,7 @@ export default function HomeNavBar() {
             />
           </div>
 
-          <Link to="/userProfile">
+          <Link to="/userProfile/1">
             <IconButton>
               <AccountCircle fontSize="large" style={{ color: "#32e0c4" }} />
             </IconButton>

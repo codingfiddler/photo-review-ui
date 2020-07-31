@@ -1,8 +1,6 @@
 import React from 'react'
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import Paper from '@material-ui/core/Paper'
-import Button from '@material-ui/core/Button';
 import SpecsButton from './SpecsButton';
 import axios from "axios"
 
@@ -19,7 +17,7 @@ class PhotoHeader extends React.Component {
                     <h1>{title}</h1>
                 </div>
                 <div>
-                    <h5>Taken by: @{username} </h5>
+                    <h5>Taken by: @smilte.val </h5>
                 </div>
                 <div style={{ display: "flex" }}>
 

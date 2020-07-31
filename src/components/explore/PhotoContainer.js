@@ -14,7 +14,7 @@ const PhotoContainer = (props) => {
           </Link>
           <div className="overlay">
             <h1 className="title font-weight-bolder">{photo.title}</h1>
-            <h2 className="eye">{photo.username}</h2>
+            {/* <h2 className="eye">{photo.username}</h2> */}
           </div>
         </div>
       ))}

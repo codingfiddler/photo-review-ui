@@ -57,7 +57,8 @@ class UserProfile extends React.Component {
               color: "white",
               justifyContent: "center",
               alignItems: "center",
-              marginLeft: "635px",
+              width: "20%",
+              marginLeft: "39.5%"
             }}
             variant="contained"
           >
@@ -65,8 +66,9 @@ class UserProfile extends React.Component {
             Edit User Information
           </Button>
         </Link>
+        <hr />
         <UserPhotos />
-      </div>
+      </div >
     );
   }
 }
