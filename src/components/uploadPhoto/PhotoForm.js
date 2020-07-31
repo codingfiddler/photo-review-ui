@@ -18,6 +18,7 @@ export class PhotoForm extends Component {
     iso: "",
     email: "",
     photo: "https://i0.wp.com/theturf.com.au/wp-content/uploads/2016/05/placeholder.png?ssl=1",
+    selectedFile: "",
   };
 
   // Proceed to next step
@@ -61,8 +62,9 @@ export class PhotoForm extends Component {
       shutter_speed,
       iso,
       photo,
+      selectedFile,
     } = this.state;
-    const values = { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso, photo };
+    const values = { title, location_taken, taken_date, software_used, camera_used, camera_lens, aperture, shutter_speed, iso, photo, selectedFile };
 
     switch (step) {
       case 1:

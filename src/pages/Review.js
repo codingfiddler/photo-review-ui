@@ -12,8 +12,8 @@ import ReviewList from "../components/review/ReviewList"
 
 function Review(props) {
 
-    let { photoId } = useParams()
-    console.log(photoId)
+    let { photo_id } = useParams()
+    console.log(photo_id)
 
     const riverPhoto = "https://images.unsplash.com/photo-1594722553761-58b3be7b088d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 
@@ -22,7 +22,7 @@ function Review(props) {
 
 
     useEffect(() => {
-        axios.get(`https://api.krino.fiddlingphotographer.com/users/upload/${photoId}/`)
+        axios.get(`https://api.krino.fiddlingphotographer.com/users/upload/${photo_id}/`)
             .then(response => {
                 const data = response.data
                 setPhoto(data)
@@ -44,7 +44,7 @@ function Review(props) {
                     <div style={{ width: "100%", boxShadow: "1px 1px 5px" }}>
                         <PhotoHeader photo={photo} />
                         <div style={{ backgroundColor: "white" }}>
-                            <img style={{ padding: "0px 10px 10px 10px" }} width="100%" src={photo.photo} />
+                            <img style={{ padding: "0px 10px 10px 10px" }} width="50%" src={photo.photo} />
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ function Review(props) {
             </div>
 
 
-        </div>
+        </div >
     )
 }
 

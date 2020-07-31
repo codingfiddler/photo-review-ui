@@ -12,7 +12,11 @@ class FormPhotoDetails extends Component {
   };
 
 
+
   render() {
+
+    console.log(this.props.photo)
+
     const { values, handleChange } = this.props;
     return (
       <>

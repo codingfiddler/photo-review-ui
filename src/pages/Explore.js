@@ -3,6 +3,7 @@ import ExploreNavBar from "../components/explore/ExploreNavBar";
 import Hero from "../components/explore/Hero";
 import PhotoContainer from "../components/explore/PhotoContainer";
 import ScrollUpArrow from "../components/ScrollUpArrow";
+import axios from "axios";
 
 class Explore extends React.Component {
   constructor() {
@@ -10,137 +11,7 @@ class Explore extends React.Component {
     this.state = {
       // store images that will be fetched from within component
       photos: [
-        {
-          id: 1,
-          title: "White Rocks, Touch of Sunshine",
-          photographer: "@byTheLake",
-          url:
-            "https://images.unsplash.com/photo-1595236332861-7553ef284422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 2,
-          title: "accusamus beatae ad facil",
-          photographer: "@concreteJungler",
-          url:
-            "https://images.unsplash.com/photo-1595230907762-54cfe6dbd901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80",
-        },
-        {
-          id: 3,
-          title: "Look Through",
-          photographer: "@kathyJennings",
-          url:
-            "https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
-        },
-        {
-          id: 4,
-          title: "Leaf Shadow",
-          photographer: "@shadowHunter",
-          url:
-            "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 5,
-          title: "Bread, Wine Glass, Fruit",
-          photographer: "@summerFunner",
-          url:
-            "https://images.unsplash.com/photo-1595232878814-74d5a59ed9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1282&q=80",
-        },
-        {
-          id: 7,
-          title: "Brown and Gray Mountains",
-          photographer: "@traveler",
-          url:
-            "https://images.unsplash.com/photo-1595232548387-101b19c0c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-        {
-          id: 8,
-          title: "Above the Clouds",
-          photographer: "@viewer10232",
-          url:
-            "https://images.unsplash.com/photo-1595181271233-35297004788d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-        },
-        {
-          id: 9,
-          title: "somewhere over the rainbow",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595169269500-1993571072e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
 
-        {
-          id: 10,
-          title: "flowers, blue pot",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595162244081-72420b24fe6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 1,
-          title: "White Rocks, Touch of Sunshine",
-          photographer: "@byTheLake",
-          url:
-            "https://images.unsplash.com/photo-1595236332861-7553ef284422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 2,
-          title: "accusamus beatae ad facil",
-          photographer: "@concreteJungler",
-          title: "spark",
-          url:
-            "https://images.unsplash.com/photo-1595230907762-54cfe6dbd901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80",
-        },
-        {
-          id: 3,
-          title: "Look Through",
-          photographer: "@kathyJennings",
-          title: "colors",
-          url:
-            "https://images.unsplash.com/photo-1595213119673-e7b717419abe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
-        },
-        {
-          id: 4,
-          title: "Leaf Shadow",
-          photographer: "@shadowHunter",
-          title: "coffee",
-          url:
-            "https://images.unsplash.com/photo-1595236629937-aadaf7c1d99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
-        {
-          id: 5,
-          title: "Bread, Wine Glass, Fruit",
-          photographer: "@summerFunner",
-          url:
-            "https://images.unsplash.com/photo-1595232878814-74d5a59ed9e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1282&q=80",
-        },
-        {
-          id: 7,
-          title: "Brown and Gray Mountains",
-          photographer: "@traveler",
-          url:
-            "https://images.unsplash.com/photo-1595232548387-101b19c0c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-        {
-          id: 8,
-          title: "Above the Clouds",
-          photographer: "@viewer10232",
-          url:
-            "https://images.unsplash.com/photo-1595181271233-35297004788d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1275&q=80",
-        },
-        {
-          id: 9,
-          title: "somewhere over the rainbow",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595169269500-1993571072e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-        },
-
-        {
-          id: 10,
-          title: "flowers, blue pot",
-          photographer: "@cloudChaser",
-          url:
-            "https://images.unsplash.com/photo-1595162244081-72420b24fe6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        },
       ],
       information: {
         title: "Explore",
@@ -156,21 +27,25 @@ class Explore extends React.Component {
   componentDidMount() {
     // https://api.thedogapi.com/v1/images/search?limit=3
 
-    fetch("https://api.krino.fiddlingphotographer.com/users/upload/").then(
-      (res) => {
-        if (!res.ok) {
-          throw Error("error fetching cute doggie");
-        }
-        return res
-          .json()
-          .then((allData) => {
-            this.setState({ photos: this.state.photos }); // allData
-          })
-          .catch((err) => {
-            throw Error(err.message);
-          });
-      }
-    );
+
+    // axios.get("https://krino-images.s3.amazonaws.com/IMG_20200404_124353_Izd0TNN.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIASFEFGCHVIWFT5YLB%2F20200731%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200731T004216Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3948798f5a3a02116adf197624b5658140183ab59270a71c349e007f5abd00f2")
+    //   .then(response => {
+    //     console.log(response)
+    //   })
+    //   .catch(error => {
+    //     console.log(error)
+    //   })
+
+
+    axios.get("https://api.krino.fiddlingphotographer.com/users/upload/")
+      .then(response => {
+        const data = response.data
+        this.setState({ photos: data });
+        console.log(data)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   render() {

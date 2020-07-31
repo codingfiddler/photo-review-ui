@@ -35,7 +35,7 @@ class App extends React.Component {
               <Route path="/uploadPhoto" component={UploadPhoto} />
               <Route path="/userProfile" component={UserProfile} />
               <Route path="/editUser" component={EditUser} />
-              <Route path="/review/:photoId" component={Review} />
+              <Route path="/review/:photo_id" component={Review} />
             </Switch>
           </Router>
         </Container>
